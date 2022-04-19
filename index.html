@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+    />
+
+    <link href="./styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./public/css/svgmap.css" />
+    <title>World War - Africa</title>
+  </head>
+  <body>
+    <div id="newPlayer">
+      <form>
+        <h1>Hello! Welcome to the World War - Africa</h1>
+        <label for="governmentType">Government type:</label>
+        <div id="governmentType">
+          <p>Select your government type <span>&#11167;</span></p>
+        </div>
+        <p id="infoSelectType"></p>
+      </form>
+    </div>
+    <div class="infos">
+      <div class="moreInfos">
+        <p id="regionInfo">Africa</p>
+        <p class="zoomInfo">
+          <span id="zoomInfo">1</span>
+          x
+        </p>
+        <p class="influence">Name: <span id="name">...</span></p>
+        <p class="influence">Influence: <span id="influence">0</span></p>
+        <p class="authority">Authority: <span id="authority">0</span></p>
+        <p class="acceptance">Acceptance: <span id="acceptance">0</span></p>
+        <p class="resources">
+          Resources: <span id="resources">100.000</span> $
+        </p>
+        <p class="military">Military: <span id="military">50.000</span></p>
+      </div>
+      <div class="infosP">
+        <div id="color"></div>
+        <p id="arrow">&#11165;</p>
+        <button class="btnM">...</button>
+      </div>
+    </div>
+    <div id="rootMap"></div>
+    <div id="zoom">
+      <button disabled id="zoomIn">+</button>
+      <button disabled id="zoomOut">-</button>
+    </div>
+    <script src="./renderer.js" defer></script>
+  </body>
+</html>

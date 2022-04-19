@@ -1,0 +1,198 @@
+:root {
+  --blue: #073d8f;
+  --back-map: #8ab4f8;
+  --fill-primary: #94d2a5;
+  --fill-secundary: #579668;
+}
+
+@font-face {
+  font-family: "UbuntuRegular";
+  src: url("./src/assets/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+  font-family: "UbuntuBold";
+  src: url("./src/assets/Ubuntu-Bold.ttf");
+}
+
+@keyframes colors {
+  0% {
+    color: red;
+  }
+  50% {
+    color: #000;
+  }
+  100% {
+    color: red;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  outline: none;
+  border: none;
+  font-family: "UbuntuRegular";
+}
+
+body {
+  background-color: var(--back-map);
+}
+
+input {
+  background-color: transparent;
+  border-bottom: 1px solid var(--blue);
+  padding: 5px 2px;
+  color: var(--blue);
+}
+
+label {
+  font-family: "UbuntuBold";
+  margin-top: 35px;
+}
+
+#rootMap {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* svg {
+  transform: scale(2.8);
+} */
+
+path {
+  fill: var(--fill-primary);
+  /* fill: #d2c994; */
+  stroke: #000000;
+  stroke-width: 0.1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+path:hover {
+  transition: 0.5s ease;
+  fill: var(--fill-secundary);
+  cursor: pointer;
+}
+
+.infos {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 1rem;
+  color: #1400c6;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 10px 0 10px 10px;
+  background: #ffffff;
+  display: flex;
+  box-shadow: 0 1px 5px #000;
+}
+
+.infos p,
+.infos span {
+  margin-top: 5px;
+  font-size: 17px;
+}
+
+.zoomInfo {
+  padding: 0;
+}
+
+#zoom {
+  position: fixed;
+  bottom: 10%;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+#zoomIn,
+#zoomOut {
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  margin: 10px 0 0 0;
+}
+
+#newPlayer {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+
+#newPlayer form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--blue);
+  z-index: 99;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+#governmentType {
+  text-align: center;
+  background: var(--blue);
+  color: #fff;
+  padding: 7px 17px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 25px;
+}
+
+#infoSelectType {
+  text-align: center;
+  max-width: 40%;
+  color: rgb(0, 0, 0);
+  position: fixed;
+  bottom: 50px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 5px;
+  z-index: 2;
+  box-shadow: 0px 1px 5px #000;
+}
+
+#color {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+.infosP {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#arrow {
+  animation: colors infinite 1s;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.btnM {
+  background-color: transparent;
+  color: #020084;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.displayN {
+  display: none !important;
+}
